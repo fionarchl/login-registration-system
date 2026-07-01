@@ -1,3 +1,9 @@
+### Configuration ###
+application.properties
+application-*.properties
+*.yml
+*.yaml
+
 ### Maven ###
 target/
 pom.xml.tag

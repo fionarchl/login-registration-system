@@ -1,0 +1,54 @@
+# Copy this file to application.properties and fill in the values
+
+spring.application.name=auth-demo
+server.port=8080
+
+# ── JPA + Database ──
+# For H2 (development):
+spring.datasource.url=jdbc:h2:mem:authdb;DB_CLOSE_DELAY=-1
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=false
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# For PostgreSQL (production), replace the above with:
+# spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
+# spring.datasource.username=your_user
+# spring.datasource.password=your_password
+# spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+# spring.jpa.hibernate.ddl-auto=update
+
+# ── JWT ──
+# IMPORTANT: Use a secure random string of at least 32-64 characters in production
+app.jwt.secret=YOUR_SECURE_JWT_SECRET_KEY_HERE
+app.jwt.access-token-expiry-ms=900000
+app.jwt.refresh-token-expiry-ms=604800000
+
+# ── Rate Limiting ──
+app.rate-limit.login.max-attempts=5
+app.rate-limit.login.window-seconds=60
+
+# ── Account Lockout ──
+app.lockout.max-attempts=5
+app.lockout.duration-minutes=15
+
+# ── Email Verification ──
+app.mail.verification-enabled=false
+app.verification.base-url=http://localhost:8080
+app.verification.token-expiry-hours=24
+
+# Mail Server Config (if verification-enabled=true)
+# spring.mail.host=smtp.gmail.com
+# spring.mail.port=587
+# spring.mail.username=your-email@gmail.com
+# spring.mail.password=your-app-password
+# spring.mail.properties.mail.smtp.auth=true
+# spring.mail.properties.mail.smtp.starttls.enable=true
+
+# ── Logging ──
+logging.level.com.auth.demo=INFO
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
