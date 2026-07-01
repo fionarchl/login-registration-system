@@ -72,7 +72,7 @@ For local development, the application can also be configured to use H2.
 Clone the repository and move into the project directory:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/fionarchl/login-registration-system.git "Login Registration System"
 cd "Login Registration System"
 ```
 
@@ -196,4 +196,3 @@ The compiled artifact is written to the `target` directory.
 - Store secrets outside source control for real deployments.
 - Add or update tests when changing authentication rules, token behavior, validation, or security configuration.
 - Prefer DTOs for request and response payloads instead of exposing entities directly.
-
