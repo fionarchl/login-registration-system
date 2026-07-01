@@ -1,8 +1,0 @@
-com\auth\demo\service\impl\AuthServiceImplTest$RefreshTokenTests.class
-com\auth\demo\service\impl\AuthServiceImplTest$LoginTests.class
-com\auth\demo\service\impl\AuthServiceImplTest$ChangePasswordTests.class
-com\auth\demo\service\impl\AuthServiceImplTest.class
-com\auth\demo\service\impl\AuthServiceImplTest$LogoutTests.class
-com\auth\demo\service\impl\AuthServiceImplTest$VerificationTests.class
-com\auth\demo\controller\AuthControllerIntegrationTest.class
-com\auth\demo\service\impl\AuthServiceImplTest$RegistrationTests.class
